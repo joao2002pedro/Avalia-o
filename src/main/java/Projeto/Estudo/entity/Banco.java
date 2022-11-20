@@ -1,2 +1,5 @@
-package Projeto.Estudo.entity;public class Banco {
+package Projeto.Estudo.entity;
+
+public class Banco {
+
 }
