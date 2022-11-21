@@ -1,4 +1,4 @@
-package Repository;
+package Projeto.Estudo.Repository;
 
 import Projeto.Estudo.entity.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -13,21 +13,21 @@ public class Banco
     private Long id;
     private String nomeBanco;
     private String numDaConta;
-    private Double valorParaImprestimo;
+    private Double valorParcImprestimo;
 
     public Banco(String nomeBanco, String numDaConta, Double valorParaImprestimo) {
         this.nomeBanco = nomeBanco;
         this.numDaConta = numDaConta;
-        this.valorParaImprestimo = valorParaImprestimo;
+        this.valorParcImprestimo = valorParaImprestimo;
     }
 
     public Banco() {
     }
+    //Um construtor vazio sempre
 
     public Long getId() {
         return id;
     }
-
     public String getNomeBanco() {
         return nomeBanco;
     }
@@ -44,11 +44,12 @@ public class Banco
         this.numDaConta = numDaConta;
     }
 
-    public Double getValorParaImprestimo() {
-        return valorParaImprestimo;
+    public Double getValorParcImprestimo() {
+        return valorParcImprestimo;
     }
 
-    public void setValorParaImprestimo(Double valorParaImprestimo) {
-        this.valorParaImprestimo = valorParaImprestimo;
+    public void setValorParcImprestimo(Double valorParcImprestimo) {
+        this.valorParcImprestimo = valorParcImprestimo;
     }
+    //Essa são as construção de construter e getter and setter (Vale a pena lembrar que o setId deve-se tirar)
 }

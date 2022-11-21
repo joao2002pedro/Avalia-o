@@ -10,19 +10,31 @@ public class Cliente
     @GeneratedValue(strategy = GenerationType.AUTO)         //Função da biblioteca que gera automaticamente id
     private Long id;
     private String nome;
-    private String Cpf;
+    private String cpf;
+    private Double valorImprestimo;
     private Integer quantParcelas;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Banco> banco;
+//Essa é a primeira parte para acrescentar ao postman, apos a lista do Banco deve-se constar
+// [
+// {
+// }
+// ]
+//
 
-    public Cliente(String nome, String cpf, Integer quantParcelas, List<Banco> banco) {
+
+
+    public Cliente(String nome, String cpf, Double valorImprestimo, Integer quantParcelas, List<Banco> banco) {
         this.nome = nome;
-        Cpf = cpf;
+        this.cpf = cpf;
+        this.valorImprestimo = valorImprestimo;
         this.quantParcelas = quantParcelas;
         this.banco = banco;
     }
+
     public Cliente() {
     }
+    //Um construtor vazio sempre
 
     public Long getId() {
         return id;
@@ -37,11 +49,19 @@ public class Cliente
     }
 
     public String getCpf() {
-        return Cpf;
+        return cpf;
     }
 
     public void setCpf(String cpf) {
-        Cpf = cpf;
+        this.cpf = cpf;
+    }
+
+    public Double getValorImprestimo() {
+        return valorImprestimo;
+    }
+
+    public void setValorImprestimo(Double valorImprestimo) {
+        this.valorImprestimo = valorImprestimo;
     }
 
     public Integer getQuantParcelas() {
@@ -59,4 +79,5 @@ public class Cliente
     public void setBanco(List<Banco> banco) {
         this.banco = banco;
     }
+    //Essa são as construção de construter e getter and setter (Vale a pena lembrar que o setId deve-se tirar)
 }

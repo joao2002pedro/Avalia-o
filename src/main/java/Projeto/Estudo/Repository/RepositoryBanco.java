@@ -1,4 +1,7 @@
-package Repository;
+package Projeto.Estudo.Repository;
 
-public interface RepositoryBanco {
+import Projeto.Estudo.entity.Banco;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface RepositoryBanco extends JpaRepository<Banco, Long> {
 }
